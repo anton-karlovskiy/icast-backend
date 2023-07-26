@@ -1,0 +1,22 @@
+src/serviceWorker.js
+## file extensions
+*.*
+!*.css
+!*.js
+!*.json
+!*.jsx
+!*.less
+!*.md
+!*.mdx
+!*.ts
+!*.tsx
+!*.yml
++LICENSE
+ !*.css
+ !*.js
+
+## copied from .gitignore
+[a few paths]
+
+## shared between eslint and prettier
+[a few more paths]
