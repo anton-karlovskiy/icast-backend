@@ -1,16 +1,12 @@
 {
   "cSpell.words": [
-    "Dimg",
-    "SIGNIN",
-    "TODOs",
-    "TWILIO",
-    "Wven",
-    "YSTL",
     "datasource",
     "datasources",
+    "Dimg",
     "disbursable",
     "goalserve",
     "grahpql",
+    "icast",
     "icastadmin",
     "icastuser",
     "karlovskiy",
@@ -18,11 +14,16 @@
     "ninjaassasin",
     "nzuom",
     "sendmail",
+    "SIGNIN",
     "soccerfixtures",
     "soccerleague",
     "soccernew",
     "tekon",
+    "TODOs",
+    "TWILIO",
     "unsync",
-    "visitorteam"
+    "visitorteam",
+    "Wven",
+    "YSTL"
   ]
 }
