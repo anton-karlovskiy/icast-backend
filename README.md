@@ -39,21 +39,24 @@ A comprehensive **GraphQL-based backend API** for sports prediction and fantasy 
 
 ### Project Structure
 ```
-src/
-├── configs/           # Configuration files
-├── database/          # MongoDB models and seed data
-│   ├── models/        # Mongoose schemas
-│   └── seed/          # Database seeding scripts
-├── engine/            # Core business logic
-│   ├── apis/          # External API integrations
-│   ├── crons/         # Scheduled tasks
-│   └── services/      # Business services
-├── graphql/           # GraphQL implementation
-│   ├── datasources/   # Data source classes
-│   ├── resolvers/     # GraphQL resolvers
-│   └── schemas/       # GraphQL type definitions
-├── lib/               # Utility libraries
-└── utils/             # Helper functions
+├── .env.example       # Environment variables template
+├── package.json       # Dependencies and scripts
+├── README.md          # Project documentation
+└── src/
+    ├── configs/       # Configuration files
+    ├── database/       # MongoDB models and seed data
+    │   ├── models/     # Mongoose schemas
+    │   └── seed/       # Database seeding scripts
+    ├── engine/         # Core business logic
+    │   ├── apis/       # External API integrations
+    │   ├── crons/      # Scheduled tasks
+    │   └── services/   # Business services
+    ├── graphql/        # GraphQL implementation
+    │   ├── datasources/ # Data source classes
+    │   ├── resolvers/   # GraphQL resolvers
+    │   └── schemas/     # GraphQL type definitions
+    ├── lib/            # Utility libraries
+    └── utils/          # Helper functions
 ```
 
 ## 🚀 Quick Start
@@ -77,13 +80,19 @@ src/
    ```
 
 3. **Environment Setup**
-   Create a `.env` file with the following variables:
+   Copy the example environment file and configure your variables:
+   ```bash
+   cp .env.example .env
+   ```
+   
+   Update the `.env` file with your actual values:
    ```env
    NODE_ENV=development
    PORT=4000
    JWT_SECRET=your_jwt_secret
    GOAL_SERVE_API_KEY=your_goalserve_api_key
-   MONGODB_URI=your_mongodb_connection_string
+   DEV_MONGO_URI=your_development_mongodb_connection_string
+   PROD_MONGO_URI=your_production_mongodb_connection_string
    ```
 
 4. **Start development server**
@@ -121,7 +130,8 @@ Set the following environment variables in your Heroku dashboard:
 - `GOAL_SERVE_API_KEY` - Your GoalServe API key
 - `PORT` - Server port (automatically set by Heroku)
 - `JWT_SECRET` - Secret key for JWT token signing
-- `MONGODB_URI` - MongoDB connection string
+- `PROD_MONGO_URI` - Production MongoDB connection string
+- `DEV_MONGO_URI` - Development MongoDB connection string (optional for production)
 
 ```bash
 heroku config:set NPM_CONFIG_PRODUCTION=false
